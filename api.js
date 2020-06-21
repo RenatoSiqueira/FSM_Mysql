@@ -11,8 +11,22 @@ const test = async () => {
     //await products.addImage(3, ['img test', 'url'])
     // const prods = await products.findAll()
     // console.log(prods)
-    const prods = await products.findAllbyCategory(3)
-    console.log(prods)
+    // const prods = await products.findAllbyCategory(3)
+    // console.log(prods)
+    // const prods = await products.findAllPaginated({ pageSize: 1, currentPage: 3 })
+    // console.log(prods)
+    // const prods = await products.findAllPaginated()
+    // console.log(prods)
+    // await products.updateCategories(3, [4])
+
+    /**
+     * To Force connections for test PoolConnections.
+     for(let i=0; i<1000; i++) {
+         products.findAllPaginated().then(prods => console.log(prods))
+     }
+     */
+
+    await products.updateCategories(3, [10])
 }
 
 test()
